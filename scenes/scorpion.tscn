@@ -1,0 +1,189 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjolynplp8st7"]
+
+[ext_resource type="AudioStream" uid="uid://xnlgowyq5fki" path="res://sounds/scorpion_reload.wav" id="2_gdejy"]
+[ext_resource type="ArrayMesh" uid="uid://ky426qhco4dl" path="res://scenes/weapons/scorpion_gun.obj" id="3_hk14m"]
+[ext_resource type="AudioStream" uid="uid://bgi4bttmpp2ed" path="res://sounds/scorpion_shot.wav" id="3_su3xx"]
+
+[sub_resource type="Animation" id="Animation_b8n7b"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("reload:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScorpionGun2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScorpionGun2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("shot:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ScorpionGun2/bolt:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.105677, 0.160213, -0.511873)]
+}
+
+[sub_resource type="Animation" id="Animation_c8vg3"]
+resource_name = "reload"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("reload:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScorpionGun2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0595775, 0.1, 0.140952, 0.189873, 0.244122, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.627114, 0, 0), Vector3(-1.33259, 0, 0), Vector3(-2.27854, 0, 0), Vector3(2.67487, 0, 0), Vector3(1.23381, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ous70"]
+resource_name = "shoot"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScorpionGun2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499436, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.115769), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScorpionGun2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.02107, 0.0499436, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0658164, 0, 0), Vector3(-0.101046, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("shot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ScorpionGun2/bolt:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0202896, 0.0491632, 0.0714037, 0.0874013, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.105677, 0.160213, -0.511873), Vector3(0.105677, 0.142761, -0.236886), Vector3(0.105677, 0.121058, -0.0574437), Vector3(0.105677, 0.112442, 0.189251), Vector3(0.105677, 0.120907, 0.514834), Vector3(0.105677, 0.160213, -0.511873)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tn4u8"]
+_data = {
+"RESET": SubResource("Animation_b8n7b"),
+"reload": SubResource("Animation_c8vg3"),
+"shoot": SubResource("Animation_ous70")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_5682k"]
+size = Vector3(0.2, 0.2, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_676fc"]
+albedo_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="reload" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.807368, -1.10294)
+stream = ExtResource("2_gdejy")
+pitch_scale = 3.0
+
+[node name="shot" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.75792)
+stream = ExtResource("3_su3xx")
+volume_db = 0.012
+pitch_scale = 0.59
+emission_angle_degrees = 22.5
+
+[node name="scorpion_anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tn4u8")
+}
+
+[node name="ScorpionGun2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_hk14m")
+
+[node name="bolt" type="MeshInstance3D" parent="ScorpionGun2"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 7.45058e-09, 1, 0.105677, 0.160213, -0.511873)
+mesh = SubResource("BoxMesh_5682k")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_676fc")

@@ -1,0 +1,266 @@
+[gd_scene load_steps=15 format=3 uid="uid://n1okpyp373di"]
+
+[ext_resource type="Script" path="res://scripts/pistol.gd" id="1_2snx5"]
+[ext_resource type="AudioStream" uid="uid://dea1tkeuidr8b" path="res://sounds/gunshot.wav" id="1_rlwdl"]
+[ext_resource type="AudioStream" uid="uid://1xqtvyghyqk1" path="res://sounds/pistol_reload.wav" id="2_hrqv1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i56u"]
+albedo_color = Color(0.290196, 0.290196, 0.290196, 1)
+metallic = 0.43
+metallic_specular = 0.72
+roughness = 0.25
+
+[sub_resource type="BoxMesh" id="BoxMesh_whmr2"]
+material = SubResource("StandardMaterial3D_4i56u")
+size = Vector3(0.5, 1.6, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4kyx"]
+albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5dmnl"]
+size = Vector3(0.07, 0.07, 0.07)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6ys8"]
+albedo_color = Color(0.290196, 0.290196, 0.290196, 1)
+metallic = 0.69
+metallic_specular = 0.73
+roughness = 0.25
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_f86yl"]
+material = SubResource("StandardMaterial3D_m6ys8")
+top_radius = 0.3
+bottom_radius = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqwkm"]
+albedo_color = Color(0.282353, 0.282353, 0.282353, 1)
+albedo_texture_force_srgb = true
+metallic = 1.0
+
+[sub_resource type="Animation" id="Animation_egch4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("gun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("gun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("shot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mag:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mag:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.05191, -1.68643, 1.33403e-07)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("reload:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_v3h3k"]
+resource_name = "Reload"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mag:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true, true, true, true, true, true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("gun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.859647, 1.05149, 3.75764e-08), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mag:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.05191, -1.68643, 1.33403e-07), Vector3(3.05191, -2.26125, 1.33403e-07), Vector3(3.05191, -2.55605, 1.33403e-07), Vector3(2.65088, -2.33864, 1.15874e-07), Vector3(2.78456, -1.80713, 1.21717e-07), Vector3(2.91824, -1.27515, 1.2756e-07), Vector3(3.05191, -1.68643, 1.33403e-07), Vector3(3.05191, -1.45876, 1.33403e-07), Vector3(2.56401, -1.45876, 1.12077e-07), Vector3(2.25283, -1.45876, 9.84744e-08), Vector3(2.17531, -1.21363, 9.50859e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("reload:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_e0k87"]
+resource_name = "Shoot"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("gun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.1261, 0, 4.92233e-08), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("gun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(-1.06148e-07, -3.14159, 0.576587), Vector3(0, -3.14159, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("shot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nm66o"]
+_data = {
+"RESET": SubResource("Animation_egch4"),
+"Reload": SubResource("Animation_v3h3k"),
+"Shoot": SubResource("Animation_e0k87")
+}
+
+[node name="pistol" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_2snx5")
+
+[node name="Mag" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.05191, -1.68643, 1.33403e-07)
+visible = false
+mesh = SubResource("BoxMesh_whmr2")
+skeleton = NodePath("../gun")
+
+[node name="gun" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_n4kyx")
+size = Vector3(5, 1, 1)
+
+[node name="ramparts" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(-1, 0, 3.33851e-07, 0, 2.66022, 0, -1.50996e-07, 0, -2.211, 2.10201, 0.553066, 0.0175919)
+mesh = SubResource("BoxMesh_5dmnl")
+skeleton = NodePath("../..")
+
+[node name="ramparts2" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(-1, 0, 3.33851e-07, 0, 2.66022, 0, -1.50996e-07, 0, -2.211, -1.76302, 0.553066, 0.306482)
+mesh = SubResource("BoxMesh_5dmnl")
+skeleton = NodePath("../..")
+
+[node name="ramparts3" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(-1, 0, 3.33851e-07, 0, 2.66022, 0, -1.50996e-07, 0, -2.211, -1.76302, 0.553066, -0.281028)
+mesh = SubResource("BoxMesh_5dmnl")
+skeleton = NodePath("../..")
+
+[node name="barrel" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(4.37114e-08, 1, 1.94707e-07, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1.94707e-07, -1, 1.68288, 0, 3.27668e-07)
+mesh = SubResource("CylinderMesh_f86yl")
+skeleton = NodePath("../..")
+
+[node name="handle" type="CSGBox3D" parent="gun"]
+transform = Transform3D(1.398, -2.84217e-14, 0, 2.84217e-14, 1.62469, 0, -7.10543e-15, -8.47033e-22, 1, -2.13714, -1.24059, 2.84217e-14)
+material_override = SubResource("StandardMaterial3D_tqwkm")
+size = Vector3(0.5, 1, 1)
+
+[node name="reload" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2649, -1.7524, 9.9002e-08)
+stream = ExtResource("2_hrqv1")
+
+[node name="shot" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02981, 0, -1.32437e-07)
+stream = ExtResource("1_rlwdl")
+volume_db = 10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nm66o")
+}

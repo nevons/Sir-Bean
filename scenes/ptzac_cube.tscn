@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjff8ao1dms5x"]
+
+[ext_resource type="Texture2D" uid="uid://d4nhn7rp1pouv" path="res://textures/memes/XEBwL-8yQiamJVLoUsxQXw-smiley face_image-3_1689842619.png" id="1_c8wo3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_syoc2"]
+friction = 0.75
+rough = true
+bounce = 0.25
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ptsk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7njw"]
+albedo_color = Color(0.952941, 0.52549, 0, 1)
+billboard_mode = 1
+
+[sub_resource type="TextMesh" id="TextMesh_qufgf"]
+material = SubResource("StandardMaterial3D_t7njw")
+text = "WELCOME TO YOUR PTZAC"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71t15"]
+albedo_texture = ExtResource("1_c8wo3")
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sdy1q"]
+
+[node name="ptzac_cube" type="RigidBody3D"]
+collision_layer = 3
+collision_mask = 3
+mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_syoc2")
+can_sleep = false
+angular_velocity = Vector3(0, 1.74533, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_5ptsk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75727, 0)
+mesh = SubResource("TextMesh_qufgf")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+material_override = SubResource("StandardMaterial3D_71t15")
+mesh = SubResource("BoxMesh_sdy1q")
+skeleton = NodePath("../..")
