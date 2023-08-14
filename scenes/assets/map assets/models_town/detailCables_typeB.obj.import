@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dew52glwotfo0"
+path="res://.godot/imported/detailCables_typeB.obj-2ecfcefbafc7e424887ec693b37cce32.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailCables_typeB.obj-2ecfcefbafc7e424887ec693b37cce32.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/detailCables_typeB.obj"
+dest_files=["res://.godot/imported/detailCables_typeB.obj-2ecfcefbafc7e424887ec693b37cce32.mesh", "res://.godot/imported/detailCables_typeB.obj-2ecfcefbafc7e424887ec693b37cce32.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

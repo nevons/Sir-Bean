@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bh6ivf3s7ykh6"
+path="res://.godot/imported/roadDirt_pavement.obj-bb71c43d261670bafa9876ef51630c8d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadDirt_pavement.obj-bb71c43d261670bafa9876ef51630c8d.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/roadDirt_pavement.obj"
+dest_files=["res://.godot/imported/roadDirt_pavement.obj-bb71c43d261670bafa9876ef51630c8d.mesh", "res://.godot/imported/roadDirt_pavement.obj-bb71c43d261670bafa9876ef51630c8d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

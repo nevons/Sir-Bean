@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://co7ryjdp7l670"
+path="res://.godot/imported/windowSmall_typeA.obj-3dd35136eace362f22545d858e0141e7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/windowSmall_typeA.obj-3dd35136eace362f22545d858e0141e7.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/windowSmall_typeA.obj"
+dest_files=["res://.godot/imported/windowSmall_typeA.obj-3dd35136eace362f22545d858e0141e7.mesh", "res://.godot/imported/windowSmall_typeA.obj-3dd35136eace362f22545d858e0141e7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c58nc6rw0rg3f"
+path="res://.godot/imported/wallA_low.obj-4e9eef323130b8961968d0644d7cb38a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallA_low.obj-4e9eef323130b8961968d0644d7cb38a.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/wallA_low.obj"
+dest_files=["res://.godot/imported/wallA_low.obj-4e9eef323130b8961968d0644d7cb38a.mesh", "res://.godot/imported/wallA_low.obj-4e9eef323130b8961968d0644d7cb38a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

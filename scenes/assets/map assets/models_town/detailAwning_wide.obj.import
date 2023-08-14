@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cl0ph6fvfbp7q"
+path="res://.godot/imported/detailAwning_wide.obj-c605b0a9345aa5716be49d98353f7e16.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailAwning_wide.obj-c605b0a9345aa5716be49d98353f7e16.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/detailAwning_wide.obj"
+dest_files=["res://.godot/imported/detailAwning_wide.obj-c605b0a9345aa5716be49d98353f7e16.mesh", "res://.godot/imported/detailAwning_wide.obj-c605b0a9345aa5716be49d98353f7e16.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

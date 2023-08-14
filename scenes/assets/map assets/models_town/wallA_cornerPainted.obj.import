@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jrwfv1g8o7pu"
+path="res://.godot/imported/wallA_cornerPainted.obj-c33baa3a1c72202edf47c48bf5046bc5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallA_cornerPainted.obj-c33baa3a1c72202edf47c48bf5046bc5.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/wallA_cornerPainted.obj"
+dest_files=["res://.godot/imported/wallA_cornerPainted.obj-c33baa3a1c72202edf47c48bf5046bc5.mesh", "res://.godot/imported/wallA_cornerPainted.obj-c33baa3a1c72202edf47c48bf5046bc5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

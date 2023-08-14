@@ -133,7 +133,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588756, -4.52115)
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(0.600769, 0.56331, -0.567237, -0.659102, 0.750565, 0.0473048, 0.452395, 0.345448, 0.822195, 10.4958, 128.538, 1.36834)
 gravity_scale = 0.0
-angular_velocity = Vector3(0, 3.49066, 1.74533)
+angular_velocity = Vector3(0, 0.349066, 0)
+constant_torque = Vector3(0, 0.1, 0)
 
 [node name="RICARDO" type="MeshInstance3D" parent="RigidBody3D"]
 transform = Transform3D(1, 1.49012e-08, 2.98023e-08, 4.47035e-08, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)

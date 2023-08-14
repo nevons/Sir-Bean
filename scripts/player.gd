@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
 @onready var player_anim=$"../player_anim"
-@onready var weapon_code = 2
+@onready var weapon_code = 3
 @onready var bullet_count 
 @onready var ammo_reserve
+
+@onready var spread = 15
 
 #pistol
 @onready var pistol=$Head/Camera3D/pistol
@@ -18,8 +20,16 @@ var instance
 @onready var scorpion= $Head/Camera3D/scorpion
 @onready var scorpion_barrel=$Head/Camera3D/aim
 @onready var scorpion_anim=$Head/Camera3D/scorpion/scorpion_anim
-@onready var smg_bullet=load("res://scenes/smg_bullet.tscn")
+@onready var smg_bullet=load("res://scenes/weapons/smg_bullet.tscn")
 var smg_instance
+
+#shotgun
+@onready var shotgun=$Head/Camera3D/shotgun
+@onready var shotgun_aim=$Head/Camera3D/aim
+@onready var shotgun_anim=$Head/Camera3D/shotgun/shotgun_anim
+@onready var shotgun_barrel=$Head/Camera3D/shotgun/ray_group2
+@onready var shotgun_pellet=load("res://scenes/weapons/shotgun_pellet.tscn")
+var pellet_instance
 
 #speed var
 var speed 
@@ -50,6 +60,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	
+	
 		
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -67,15 +78,56 @@ func _physics_process(delta):
 	
 	#weapons
 	#switch
-	if Input.is_action_pressed("primary"):
-		player_anim.play("weapon_switch_primary")
-		weapon_code=1
+	if Input.is_action_pressed("back"):
+		if weapon_code==3:
+			player_anim.play("back_weapon_switch_from_3")
+			weapon_code=1
+		elif weapon_code==2:
+			player_anim.play("back_weapon_switch_from_2")
+			weapon_code=1
+	elif Input.is_action_pressed("primary"):
+		if weapon_code==1:
+			player_anim.play_backwards("back_weapon_switch_from_2")
+			weapon_code=2
+		elif weapon_code==3:
+			player_anim.play("weapon_switch_primary")
+			weapon_code=2
 	elif Input.is_action_just_pressed("secondary"):
-		player_anim.play("weapon_switch_secondary")
-		weapon_code=2
+		if weapon_code==2:
+			player_anim.play("weapon_switch_secondary")
+			weapon_code=3
+		elif weapon_code==1:
+			player_anim.play_backwards("back_weapon_switch_from_3")
+			weapon_code=3
+		
+	#shotgun
+	if weapon_code==1:
+		if Input.is_action_just_pressed("left_click"):
+			if !shotgun_anim.is_playing():
+				shotgun_anim.play("cocking")
+				await get_tree().create_timer(0.6).timeout
+				shotgun_anim.play("shoot")
+				for r in shotgun_barrel.get_children():
+					pellet_instance=shotgun_pellet.instantiate()
+					pellet_instance.position=r.global_position
+					pellet_instance.transform.basis=r.global_transform.basis
+					randomize()
+					r.rotate_z(randf_range(rad_to_deg(30),rad_to_deg(45)))
+					get_parent().add_child(pellet_instance)
+					
+		if Input.is_action_just_pressed("aiming"):
+			player_anim.play("back_aim")
+		if Input.is_action_just_released("aiming"):
+			player_anim.play_backwards("back_aim")
+			
+		if Input.is_action_pressed("reload"):
+			for i in range(24):
+				shotgun_anim.play("reload")
+				await get_tree().create_timer(0.4).timeout
+			
 	
 	#scorpion
-	if weapon_code==1:
+	if weapon_code==2:
 		if Input.is_action_pressed("left_click"):
 			if !scorpion_anim.is_playing():
 				scorpion_anim.play("shoot")
@@ -94,11 +146,8 @@ func _physics_process(delta):
 			
 		
 			
-	
 	#pistol
-	elif weapon_code==2:
-		bullet_count=12
-		ammo_reserve=48
+	elif weapon_code==3:
 		if Input.is_action_just_pressed("left_click"):
 			if !pistol_anim.is_playing():
 				pistol_anim.play("Shoot")
@@ -107,6 +156,7 @@ func _physics_process(delta):
 				instance.position = pistol_barrel.global_position
 				instance.transform.basis = pistol_barrel.global_transform.basis
 				get_parent().add_child(instance)
+				
 		
 		if Input.is_action_just_pressed("reload"):
 			pistol_anim.play("Reload")

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bc8u84u1padr3"
+path="res://.godot/imported/wallB_roofSlant.obj-92d1ee684b5ce647299c8b13e8a071c0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallB_roofSlant.obj-92d1ee684b5ce647299c8b13e8a071c0.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/wallB_roofSlant.obj"
+dest_files=["res://.godot/imported/wallB_roofSlant.obj-92d1ee684b5ce647299c8b13e8a071c0.mesh", "res://.godot/imported/wallB_roofSlant.obj-92d1ee684b5ce647299c8b13e8a071c0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

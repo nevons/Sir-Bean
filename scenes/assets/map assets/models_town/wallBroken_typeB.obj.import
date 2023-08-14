@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bbnrt7jvlsgyl"
+path="res://.godot/imported/wallBroken_typeB.obj-94fbe0c934e95c138993d2c5464193de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallBroken_typeB.obj-94fbe0c934e95c138993d2c5464193de.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/wallBroken_typeB.obj"
+dest_files=["res://.godot/imported/wallBroken_typeB.obj-94fbe0c934e95c138993d2c5464193de.mesh", "res://.godot/imported/wallBroken_typeB.obj-94fbe0c934e95c138993d2c5464193de.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

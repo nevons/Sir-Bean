@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://ch6kboam07rix"]
+[gd_scene load_steps=18 format=3 uid="uid://ch6kboam07rix"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2j46m"]
 [ext_resource type="PackedScene" uid="uid://cjolynplp8st7" path="res://scenes/scorpion.tscn" id="2_0gktl"]
 [ext_resource type="PackedScene" uid="uid://cktd2qllwmhga" path="res://scenes/pistol.tscn" id="2_7vga5"]
+[ext_resource type="PackedScene" uid="uid://bwhgm86ofsqkb" path="res://scenes/weapons/shotgun.tscn" id="4_hwcwn"]
 [ext_resource type="AudioStream" uid="uid://ca02oghx6yh8q" path="res://sounds/pistol_cock.mp3" id="6_7s2io"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogkpx"]
@@ -86,6 +87,186 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0.409673, -0.392481, -1.33465)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.254316, -0.625542, 0.796516)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.785398, 1.5708, 2.38419e-07)]
+}
+
+[sub_resource type="Animation" id="Animation_v1ii0"]
+resource_name = "back_aim"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.606, -0.34, -1.629), Vector3(0, -0.233, -1.369)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-9.93347e-08, -3.14159, -2.41403e-06), Vector3(-9.93347e-08, -3.14159, -2.41403e-06)]
+}
+
+[sub_resource type="Animation" id="Animation_5boag"]
+resource_name = "back_weapon_switch_from_2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/scorpion:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.251259),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.45754, -0.315986, -0.738059), Vector3(-0.58041, -0.315986, 0.034765)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/scorpion:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.251259),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.026529, -3.14159, 2.75912e-08), Vector3(0.758869, -3.14159, 2.5833e-06)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.251259, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.785398, 1.5708, 2.38419e-07), Vector3(0.785398, -3.14159, 2.38419e-07), Vector3(-1.49012e-07, -3.14159, 3.04905e-08)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.251259, 0.299264, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.254316, -0.625542, 0.796516), Vector3(1.83341, -0.570435, 0.328412), Vector3(0.606, -0.34, -1.629)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("weapon_switch:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_fcd12"]
+resource_name = "back_weapon_switch_from_3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/pistol:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.252281),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.40546, -0.4, -1.065), Vector3(-0.544159, -0.951057, 0.254772)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/pistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.252281),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(2.4979e-06, -1.5708, 0.785398)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.252281, 0.300286, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.254316, -0.625542, 0.796516), Vector3(1.16131, 1.48191, 0.326482), Vector3(0.606, -0.34, -1.629)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/shotgun:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.252281, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.785398, 1.5708, 2.38419e-07), Vector3(0, -3.14159, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("weapon_switch:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_x7uri"]
@@ -299,6 +480,9 @@ tracks/5/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i6my2"]
 _data = {
 "RESET": SubResource("Animation_mrapa"),
+"back_aim": SubResource("Animation_v1ii0"),
+"back_weapon_switch_from_2": SubResource("Animation_5boag"),
+"back_weapon_switch_from_3": SubResource("Animation_fcd12"),
 "primary_aim": SubResource("Animation_x7uri"),
 "secondary_aim": SubResource("Animation_7fgq2"),
 "weapon_switch_primary": SubResource("Animation_g0dam"),
@@ -328,6 +512,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55718, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0.134175)
+cull_mask = 1048573
 
 [node name="scorpion" parent="CharacterBody3D/Head/Camera3D" instance=ExtResource("2_0gktl")]
 transform = Transform3D(-0.2, -3.25947e-07, -3.61365e-07, 2.11837e-08, 0.14254, -0.140294, 4.86186e-07, -0.140294, -0.14254, -0.621945, -0.442097, 0.235623)
@@ -340,6 +525,44 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.409673, -0.392481, -1.33465
 target_position = Vector3(0, 0, -1000)
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
+
+[node name="shotgun" parent="CharacterBody3D/Head/Camera3D" instance=ExtResource("4_hwcwn")]
+transform = Transform3D(-5.1771e-07, 0.106066, 0.106066, 2.52882e-08, 0.106066, -0.106066, -0.15, -3.48195e-07, -3.83958e-07, 0.254316, -0.625542, 0.796516)
+
+[node name="ray_group2" type="Node3D" parent="CharacterBody3D/Head/Camera3D/shotgun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73551, 2.42782)
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-0.962932, 0, 0.269744, 0, 1, 0, -0.269744, 0, -0.962932, 0, -0.191365, -0.00959492)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D2" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-0.949737, 0, -0.313048, 0, 1, 0, 0.313048, 0, -0.949737, 0, -0.0483581, -0.00959492)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D3" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-0.985786, 0, 0.168008, 0, 1, 0, -0.168008, 0, -0.985786, 0.149228, -0.191365, -0.00959492)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D4" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-0.978635, 0, -0.205606, 0, 1, 0, 0.205606, 0, -0.978635, -0.0912366, -0.191365, -0.00959492)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D5" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-0.940597, 0, 0.339526, 0, 1, 0, -0.339526, 0, -0.940597, -0.0501731, -0.0781072, -0.0272155)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D6" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-1, -1.3549e-09, 1.50959e-07, 1.96756e-09, 0.999758, 0.0220068, -1.50952e-07, 0.0220068, -0.999758, 0.105067, -0.178975, -0.00959492)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D7" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -0.060765, -0.0317987, -0.00959492)
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D8" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D/shotgun/ray_group2"]
+transform = Transform3D(-1, 1.58254e-08, 1.45281e-07, -2.43648e-08, 0.962151, -0.272515, -1.44095e-07, -0.272515, -0.962151, 0.116047, -0.0379597, -0.00959492)
+target_position = Vector3(0, 0, -10)
 
 [node name="player_anim" type="AnimationPlayer" parent="."]
 libraries = {

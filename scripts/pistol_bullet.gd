@@ -1,6 +1,6 @@
 extends Node3D
 
-const pistol_bullet_speed = 60.0
+const pistol_bullet_speed = 100.0
 
 @onready var mesh= $MeshInstance3D
 @onready var raycast = $RayCast3D

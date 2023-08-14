@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://lhcsbnop1voj"
+path="res://.godot/imported/wallB_door.obj-ea8f7d25c09117e96db7386bd3deda97.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallB_door.obj-ea8f7d25c09117e96db7386bd3deda97.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/wallB_door.obj"
+dest_files=["res://.godot/imported/wallB_door.obj-ea8f7d25c09117e96db7386bd3deda97.mesh", "res://.godot/imported/wallB_door.obj-ea8f7d25c09117e96db7386bd3deda97.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

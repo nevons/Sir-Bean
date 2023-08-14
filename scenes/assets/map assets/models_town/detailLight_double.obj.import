@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://un6h7jaqtqdo"
+path="res://.godot/imported/detailLight_double.obj-1838455b3f1ccb9d4f3b659c9dac9f2b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailLight_double.obj-1838455b3f1ccb9d4f3b659c9dac9f2b.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/detailLight_double.obj"
+dest_files=["res://.godot/imported/detailLight_double.obj-1838455b3f1ccb9d4f3b659c9dac9f2b.mesh", "res://.godot/imported/detailLight_double.obj-1838455b3f1ccb9d4f3b659c9dac9f2b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

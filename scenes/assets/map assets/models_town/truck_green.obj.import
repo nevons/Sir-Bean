@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckhyruwphyqfw"
+path="res://.godot/imported/truck_green.obj-5b1e49f0e9830099e6a4ed6f2ee7d657.mesh"
+
+[deps]
+
+files=["res://.godot/imported/truck_green.obj-5b1e49f0e9830099e6a4ed6f2ee7d657.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/truck_green.obj"
+dest_files=["res://.godot/imported/truck_green.obj-5b1e49f0e9830099e6a4ed6f2ee7d657.mesh", "res://.godot/imported/truck_green.obj-5b1e49f0e9830099e6a4ed6f2ee7d657.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

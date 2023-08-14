@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://lixbswm6xg32"
+path="res://.godot/imported/wallA_detail.obj-d9d0db2fd15bf2d0c8f231df6b846b07.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallA_detail.obj-d9d0db2fd15bf2d0c8f231df6b846b07.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/wallA_detail.obj"
+dest_files=["res://.godot/imported/wallA_detail.obj-d9d0db2fd15bf2d0c8f231df6b846b07.mesh", "res://.godot/imported/wallA_detail.obj-d9d0db2fd15bf2d0c8f231df6b846b07.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

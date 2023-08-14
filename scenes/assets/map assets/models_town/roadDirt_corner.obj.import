@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://daxqasws17ej5"
+path="res://.godot/imported/roadDirt_corner.obj-75e991a6cd3e03e7945afc6def5c2643.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadDirt_corner.obj-75e991a6cd3e03e7945afc6def5c2643.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/roadDirt_corner.obj"
+dest_files=["res://.godot/imported/roadDirt_corner.obj-75e991a6cd3e03e7945afc6def5c2643.mesh", "res://.godot/imported/roadDirt_corner.obj-75e991a6cd3e03e7945afc6def5c2643.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

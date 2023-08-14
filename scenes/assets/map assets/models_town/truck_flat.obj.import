@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmhrwboshcb8r"
+path="res://.godot/imported/truck_flat.obj-253157acae7651f32cee19b3c07015ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/truck_flat.obj-253157acae7651f32cee19b3c07015ee.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/truck_flat.obj"
+dest_files=["res://.godot/imported/truck_flat.obj-253157acae7651f32cee19b3c07015ee.mesh", "res://.godot/imported/truck_flat.obj-253157acae7651f32cee19b3c07015ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

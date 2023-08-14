@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfl3jgioqigqd"
+path="res://.godot/imported/detailDumpster_closed.obj-8a1f99b8aa7289bbb94437b75bb665b3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailDumpster_closed.obj-8a1f99b8aa7289bbb94437b75bb665b3.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/detailDumpster_closed.obj"
+dest_files=["res://.godot/imported/detailDumpster_closed.obj-8a1f99b8aa7289bbb94437b75bb665b3.mesh", "res://.godot/imported/detailDumpster_closed.obj-8a1f99b8aa7289bbb94437b75bb665b3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

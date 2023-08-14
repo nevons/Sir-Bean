@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chuxuwqw7alg5"
+path="res://.godot/imported/treePine_small.obj-70821663818b04c23f3268e275f8b170.mesh"
+
+[deps]
+
+files=["res://.godot/imported/treePine_small.obj-70821663818b04c23f3268e275f8b170.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/treePine_small.obj"
+dest_files=["res://.godot/imported/treePine_small.obj-70821663818b04c23f3268e275f8b170.mesh", "res://.godot/imported/treePine_small.obj-70821663818b04c23f3268e275f8b170.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

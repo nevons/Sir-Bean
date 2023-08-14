@@ -40,6 +40,7 @@ target_position = Vector3(0, 0, -0.1)
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.553377)
 emitting = false
+amount = 20
 one_shot = true
 explosiveness = 1.0
 randomness = 1.0

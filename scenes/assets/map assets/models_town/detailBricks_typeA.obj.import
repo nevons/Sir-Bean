@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://by4a3ujv05irm"
+path="res://.godot/imported/detailBricks_typeA.obj-e082224bb746e9ac20c11f6d2138010e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailBricks_typeA.obj-e082224bb746e9ac20c11f6d2138010e.mesh"]
+
+source_file="res://scenes/assets/map assets/models_town/detailBricks_typeA.obj"
+dest_files=["res://.godot/imported/detailBricks_typeA.obj-e082224bb746e9ac20c11f6d2138010e.mesh", "res://.godot/imported/detailBricks_typeA.obj-e082224bb746e9ac20c11f6d2138010e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
