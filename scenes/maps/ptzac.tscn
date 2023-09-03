@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://c4w5qnlat31ir"]
+[gd_scene load_steps=16 format=3 uid="uid://c4w5qnlat31ir"]
 
 [ext_resource type="Texture2D" uid="uid://c6gureqefd55c" path="res://textures/makeshift/texture_07.png" id="1_ffx4r"]
 [ext_resource type="Texture2D" uid="uid://bmn61de0306cq" path="res://textures/makeshift/texture_05.png" id="2_x8ykv"]
 [ext_resource type="Texture2D" uid="uid://0pil7755r2xc" path="res://textures/makeshift/texture_02.png" id="3_42lab"]
-[ext_resource type="PackedScene" uid="uid://ch6kboam07rix" path="res://scenes/player.tscn" id="4_jkshv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5i0o6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -233,5 +232,3 @@ skeleton = NodePath("../wall4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="slope4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_iwe0k")
-
-[node name="player" parent="." instance=ExtResource("4_jkshv")]

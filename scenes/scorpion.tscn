@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjolynplp8st7"]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="AudioStream" uid="uid://xnlgowyq5fki" path="res://sounds/scorpion_reload.wav" id="2_gdejy"]
-[ext_resource type="ArrayMesh" uid="uid://ky426qhco4dl" path="res://scenes/weapons/scorpion_gun.obj" id="3_hk14m"]
+[ext_resource type="ArrayMesh" uid="uid://ky426qhco4dl" path="res://scenes/weapons/models_weapons/scorpion_gun.obj" id="3_hk14m"]
 [ext_resource type="AudioStream" uid="uid://bgi4bttmpp2ed" path="res://sounds/scorpion_shot.wav" id="3_su3xx"]
 
 [sub_resource type="Animation" id="Animation_b8n7b"]

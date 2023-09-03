@@ -1,0 +1,928 @@
+[gd_scene load_steps=32 format=3 uid="uid://dv51tplyoivdk"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_3rkvb"]
+[ext_resource type="Script" path="res://scripts/HUD.gd" id="2_o1cjb"]
+[ext_resource type="PackedScene" uid="uid://qkbnfydjquwj" path="res://scenes/weapons/hr_weapons/jack_off_shotgun.tscn" id="2_prx1i"]
+[ext_resource type="Script" path="res://scripts/weapon_manager.gd" id="2_wl5sl"]
+[ext_resource type="AudioStream" uid="uid://bgoqu6sovoh0i" path="res://sounds/turtle-mating.mp3" id="3_2voxi"]
+[ext_resource type="Texture2D" uid="uid://e2gwjb203wom" path="res://textures/crosshair014.png" id="3_8pnyw"]
+[ext_resource type="Resource" uid="uid://cgud574myfgbt" path="res://resources/jos.tres" id="3_rmopk"]
+[ext_resource type="PackedScene" uid="uid://evfj5c1alakr" path="res://scenes/weapons/models_weapons/shotgun_shell.tscn" id="3_tejes"]
+[ext_resource type="Resource" uid="uid://d3f30qrw5xk2b" path="res://resources/pistol.tres" id="4_6t13g"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/hr_weapons/pistol.tscn" id="4_442vh"]
+[ext_resource type="AudioStream" uid="uid://b62v81m8wwdwd" path="res://sounds/gun-click.wav" id="4_l6edu"]
+[ext_resource type="AudioStream" uid="uid://1xqtvyghyqk1" path="res://sounds/pistol_reload.wav" id="5_xtpt3"]
+[ext_resource type="AudioStream" uid="uid://10ajo1mxtqeu" path="res://sounds/shotgun_shell_load.mp3" id="6_1u5uu"]
+[ext_resource type="AudioStream" uid="uid://dea1tkeuidr8b" path="res://sounds/pistol_shot.wav" id="6_oycb4"]
+[ext_resource type="AudioStream" uid="uid://ca02oghx6yh8q" path="res://sounds/pistol_cock.mp3" id="9_5updp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_atn83"]
+albedo_color = Color(0.964706, 0.764706, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uhrbc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bc3d0"]
+points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
+[sub_resource type="Animation" id="Animation_2830i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shoot:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_click:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shotgun_shell:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shotgun_shell:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.62994, -3.16593, -8.47038)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shotgun_shell:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.523599)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shell_sound:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.521852, 0.089198)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_reload:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_shoot:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_click:playing")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/pump:playing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_cock:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/gun body/pump:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.0342607, -0.141159)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/bullet_point:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8okeu"]
+resource_name = "jack_off_shotgun_activate"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.150143),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.764213, 1.63659, -0.49372), Vector3(-0.737, 1.126, 2.039)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.0472, 0, 0), Vector3(-3.72529e-08, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/pump:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/bullet_point:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.73972, 1.23749, 2.56723)]
+}
+
+[sub_resource type="Animation" id="Animation_jeeny"]
+resource_name = "jack_off_shotgun_deactivate"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.114394, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.523599, 0, 0), Vector3(-1.0472, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.114394, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.737, 1.126, 2.039), Vector3(-0.737, 1.126, 0.876862), Vector3(-0.737, 1.126, -0.15239)]
+}
+
+[sub_resource type="Animation" id="Animation_731vp"]
+resource_name = "jack_off_shotgun_ooa"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0561759, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.737, 1.126, 2.039), Vector3(-0.737, 1.126, 1.87616), Vector3(-0.737, 1.126, 2.039)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0561759, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.72529e-08, 0, 0), Vector3(-0.0928341, 0, 0), Vector3(-3.72529e-08, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_click:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_p6lvl"]
+resource_name = "jack_off_shotgun_reload"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.737, 1.126, 2.039), Vector3(-0.737, 1.126, 2.039)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.811578), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shotgun_shell:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shotgun_shell:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4, 0.686786, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.62994, -3.16593, -8.47038), Vector3(0.583253, 0.278039, -4.17668), Vector3(0.170055, 0.389241, -3.79151)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shotgun_shell:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 3.72529e-08), Vector3(1.5708, -0.0713999, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shell_sound:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_36imy"]
+resource_name = "jack_off_shotgun_shoot"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 0.753207, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.737, 1.126, 2.039), Vector3(-0.737, 1.126, 1.21626), Vector3(-0.737, 1.126, 2.039)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 0.753207, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-3.72529e-08, 0, 0), Vector3(-0.785398, 0, 0), Vector3(-3.72529e-08, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/jos_shoot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/gun body/pump:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.149121, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.0342607, -0.141159), Vector3(0, 0.0342607, -1.18986), Vector3(0, 0.0342607, -0.141159)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun/pump:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_fjg7i"]
+resource_name = "pistol_activate"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(4.37114e-08, 1.5708, -1.5708), Vector3(0, 1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.521852, 0.089198), Vector3(-0.531, 1.293, 1.066)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_cock:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/bullet_point:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.73972, 1.23749, 2.56723)]
+}
+
+[sub_resource type="Animation" id="Animation_rhc8i"]
+resource_name = "pistol_deactivate"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.531, 1.293, 1.066), Vector3(-0.123581, 0.690001, 0.160095)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(-4.37114e-08, 1.5708, 1.5708)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ixfs1"]
+resource_name = "pistol_ooa"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0518945, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.531, 1.293, 1.066), Vector3(-0.531, 1.293, 1.013), Vector3(-0.531, 1.293, 1.066)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0518945, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 1.5708, -0.109956), Vector3(0, 1.5708, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_click:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_3lodi"]
+resource_name = "pistol_reload"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0600884, 0.0799878, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(4.37114e-08, 1.5708, -1.5708), Vector3(-4.99214e-08, 1.5708, 1.38995), Vector3(4.86084e-08, 1.5708, -1.65925), Vector3(0, 1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_reload:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6o5ai"]
+resource_name = "pistol_shoot"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 1.5708, -0.441568), Vector3(0, 1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.531, 1.293, 1.066), Vector3(-0.531, 1.293, 0.857), Vector3(-0.531, 1.293, 1.066)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol/pistol_shoot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u0fsw"]
+_data = {
+"RESET": SubResource("Animation_2830i"),
+"jack_off_shotgun_activate": SubResource("Animation_8okeu"),
+"jack_off_shotgun_deactivate": SubResource("Animation_jeeny"),
+"jack_off_shotgun_ooa": SubResource("Animation_731vp"),
+"jack_off_shotgun_reload": SubResource("Animation_p6lvl"),
+"jack_off_shotgun_shoot": SubResource("Animation_36imy"),
+"pistol_activate": SubResource("Animation_fjg7i"),
+"pistol_deactivate": SubResource("Animation_rhc8i"),
+"pistol_ooa": SubResource("Animation_ixfs1"),
+"pistol_reload": SubResource("Animation_3lodi"),
+"pistol_shoot": SubResource("Animation_6o5ai")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k81bb"]
+
+[node name="stripped back player" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+collision_mask = 7
+wall_min_slide_angle = 0.785398
+script = ExtResource("1_3rkvb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody3D"]
+script = ExtResource("2_o1cjb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharacterBody3D/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharacterBody3D/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CharacterBody3D/CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Current Weapon: "
+
+[node name="CurrentWeapon" type="Label" parent="CharacterBody3D/CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CharacterBody3D/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CharacterBody3D/CanvasLayer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Ammo:"
+
+[node name="CurrentAmmo" type="Label" parent="CharacterBody3D/CanvasLayer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CharacterBody3D/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CharacterBody3D/CanvasLayer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Weapon Stack:"
+
+[node name="WeaponStack" type="Label" parent="CharacterBody3D/CanvasLayer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="main_crosshair" type="TextureRect" parent="CharacterBody3D/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 3
+texture = ExtResource("3_8pnyw")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="body" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.958428, 0)
+material_override = SubResource("StandardMaterial3D_atn83")
+mesh = SubResource("CapsuleMesh_uhrbc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.958428, 0)
+shape = SubResource("ConvexPolygonShape3D_bc3d0")
+
+[node name="Head" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55718, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0.134175)
+cull_mask = 1048573
+
+[node name="weapons-manager" type="Node3D" parent="CharacterBody3D/Head/Camera3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.173e-08, -1.55718, 0.134175)
+script = ExtResource("2_wl5sl")
+_weapon_resources = Array[Resource("res://scripts/weapon_resource.gd")]([ExtResource("4_6t13g"), ExtResource("3_rmopk")])
+start_weapons = Array[String](["pistol", "jack_off_shotgun"])
+
+[node name="FPS_Rig" type="Node3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager"]
+
+[node name="pistol" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig" instance=ExtResource("4_442vh")]
+transform = Transform3D(-3.61999e-07, 0, 0.1, 0, 0.1, 0, -0.1, 0, -3.61999e-07, 0, 0.521852, 0.089198)
+visible = false
+
+[node name="pistol_reload" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol"]
+stream = ExtResource("5_xtpt3")
+pitch_scale = 1.21
+
+[node name="pistol_shoot" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol"]
+stream = ExtResource("6_oycb4")
+
+[node name="pistol_click" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol"]
+stream = ExtResource("4_l6edu")
+pitch_scale = 2.01
+
+[node name="pistol_cock" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/pistol"]
+stream = ExtResource("9_5updp")
+
+[node name="jack_off_shotgun" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig" instance=ExtResource("2_prx1i")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
+
+[node name="pump" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun" index="1"]
+pitch_scale = 0.8
+
+[node name="jos_shotgun_shell" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun" instance=ExtResource("3_tejes")]
+transform = Transform3D(1.73205, 1, 0, -1, 1.73205, 0, 0, 0, 2, 1.62994, -3.16593, -8.47038)
+visible = false
+
+[node name="jos_shoot" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun"]
+transform = Transform3D(5, 0, 0, 0, 5, -1.86265e-07, 0, 1.86265e-07, 5, 0.0564876, 0.332467, 1.21918)
+stream = ExtResource("3_2voxi")
+max_db = -0.474
+pitch_scale = 1.2
+
+[node name="jos_click" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun"]
+stream = ExtResource("4_l6edu")
+pitch_scale = 1.4
+
+[node name="jos_shell_sound" type="AudioStreamPlayer3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+visible = false
+stream = ExtResource("6_1u5uu")
+
+[node name="player_anim" type="AnimationPlayer" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig"]
+root_node = NodePath("../../../../../..")
+libraries = {
+"": SubResource("AnimationLibrary_u0fsw")
+}
+
+[node name="bullet_point" type="Marker3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig"]
+
+[node name="pickup" type="Area3D" parent="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/pickup"]
+transform = Transform3D(2.89892, 0, 0, 0, 1, 0, 0, 0, 2.94568, 0, 0.509108, 0)
+shape = SubResource("BoxShape3D_k81bb")
+
+[connection signal="update_ammo" from="CharacterBody3D/Head/Camera3D/weapons-manager" to="CharacterBody3D/CanvasLayer" method="_on_weaponsmanager_update_ammo"]
+[connection signal="update_weapon_stack" from="CharacterBody3D/Head/Camera3D/weapons-manager" to="CharacterBody3D/CanvasLayer" method="_on_weaponsmanager_update_weapon_stack"]
+[connection signal="weapon_changed" from="CharacterBody3D/Head/Camera3D/weapons-manager" to="CharacterBody3D/CanvasLayer" method="_on_weaponsmanager_weapon_changed"]
+[connection signal="animation_finished" from="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/player_anim" to="CharacterBody3D/Head/Camera3D/weapons-manager" method="_on_player_anim_animation_finished"]
+
+[editable path="CharacterBody3D/Head/Camera3D/weapons-manager/FPS_Rig/jack_off_shotgun"]

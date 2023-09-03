@@ -1,0 +1,172 @@
+[gd_scene load_steps=27 format=3 uid="uid://qkbnfydjquwj"]
+
+[ext_resource type="Texture2D" uid="uid://bth36fadtob45" path="res://textures/barrel texture.jpeg" id="1_ear6l"]
+[ext_resource type="Texture2D" uid="uid://cosbou1kvr6us" path="res://textures/shotgun barrel texture.jpeg" id="2_5mc1u"]
+[ext_resource type="Texture2D" uid="uid://cj5rn5jjwboyc" path="res://textures/shotgun grip.jpg" id="3_pa3tb"]
+[ext_resource type="Texture2D" uid="uid://dfe1c22ichqr8" path="res://textures/black screen.JPG" id="4_vr1bg"]
+[ext_resource type="Material" uid="uid://c0mg8htfy4a6" path="res://textures/materials/metallic_perf.tres" id="5_0jwos"]
+[ext_resource type="AudioStream" uid="uid://ccy4t6vtj5eu0" path="res://sounds/pumping shotgun.mp3" id="6_litxa"]
+[ext_resource type="AudioStream" uid="uid://bgoqu6sovoh0i" path="res://sounds/turtle-mating.mp3" id="7_3tmlm"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ojns2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ee18j"]
+albedo_color = Color(0.301961, 0.301961, 0.301961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xm87c"]
+albedo_texture = ExtResource("1_ear6l")
+metallic = 1.0
+metallic_specular = 1.0
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xpuni"]
+material = SubResource("StandardMaterial3D_xm87c")
+top_radius = 0.3
+bottom_radius = 0.3
+height = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kepqh"]
+albedo_texture = ExtResource("2_5mc1u")
+metallic = 0.61
+metallic_specular = 1.0
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncm54"]
+shading_mode = 2
+albedo_texture = ExtResource("3_pa3tb")
+emission_enabled = true
+emission = Color(0.933333, 0.933333, 0.933333, 1)
+emission_energy_multiplier = 16.0
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7knug"]
+top_radius = 0.35
+bottom_radius = 0.35
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdvc4"]
+albedo_texture = ExtResource("2_5mc1u")
+roughness = 0.71
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qbnww"]
+material = SubResource("StandardMaterial3D_vdvc4")
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ep0gu"]
+albedo_color = Color(0, 1, 0.364706, 1)
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3mex8"]
+material = SubResource("StandardMaterial3D_ep0gu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_loom2"]
+albedo_texture = ExtResource("4_vr1bg")
+
+[sub_resource type="BoxMesh" id="BoxMesh_v421f"]
+material = SubResource("StandardMaterial3D_loom2")
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_4om40"]
+radius = 0.4
+radial_steps = 13
+sections = 8
+
+[sub_resource type="TorusMesh" id="TorusMesh_oyenv"]
+inner_radius = 0.657
+outer_radius = 0.579
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_om1uv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgoib"]
+albedo_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wusn8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u320h"]
+albedo_color = Color(0.164706, 0.164706, 0.164706, 1)
+metallic = 1.0
+
+[node name="jack off" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="gun body" type="Node3D" parent="."]
+
+[node name="inner barrel" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(0.396193, 0, 0, 0, -4.37114e-08, -0.372813, 0, 1, -1.62962e-08, 0, 0.600325, 1.57204)
+mesh = SubResource("CylinderMesh_ojns2")
+surface_material_override/0 = SubResource("StandardMaterial3D_ee18j")
+
+[node name="barrel" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 0.602569, 0)
+mesh = SubResource("CylinderMesh_xpuni")
+skeleton = NodePath("../..")
+
+[node name="barrel2" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(1.91069e-15, 3.78191e-08, 1, 1, -3.78191e-08, 0, 4.37114e-08, 0.8652, -4.37114e-08, 0, 0.0106351, -0.350421)
+mesh = SubResource("CylinderMesh_xpuni")
+skeleton = NodePath("../..")
+
+[node name="barrel3" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(2.32671e-15, 2.4172e-08, 1.22626, 1.21774, -2.4172e-08, 0, 5.3229e-08, 0.55299, -5.36014e-08, 0, 0.606005, -1.11625)
+material_override = SubResource("StandardMaterial3D_kepqh")
+mesh = SubResource("CylinderMesh_xpuni")
+skeleton = NodePath("../..")
+
+[node name="pump" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(1, 0, 0, 0, -1.97846e-07, -1, 0, 4.52618, -4.37114e-08, 0, 0.0342607, -0.141159)
+material_override = SubResource("StandardMaterial3D_ncm54")
+mesh = SubResource("CylinderMesh_7knug")
+skeleton = NodePath("../..")
+
+[node name="barrel5" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0170906, 1.59974)
+mesh = SubResource("CylinderMesh_qbnww")
+skeleton = NodePath("../..")
+
+[node name="chamber" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(0.736223, 0, 0, 0, 1.23998, 0, 0, 0, 3.13825, 0, 0.343337, -4.04339)
+mesh = SubResource("BoxMesh_3mex8")
+
+[node name="bullet chamber" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(-1.52291e-08, 0.0769946, 0, -0.348402, -3.36554e-09, 0, 0, 0, 1, 0.353285, 0.669788, -3.72311)
+mesh = SubResource("BoxMesh_v421f")
+
+[node name="chamber back" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(0.897085, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 0, 0.0776951, -5.94558)
+mesh = SubResource("TubeTrailMesh_4om40")
+surface_material_override/0 = ExtResource("5_0jwos")
+
+[node name="trigger guard" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 0, -0.59356, -5.58126)
+mesh = SubResource("TorusMesh_oyenv")
+surface_material_override/0 = ExtResource("5_0jwos")
+
+[node name="hehe" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(0.352852, 0, 0, 0, 0.996957, 0, 0, 0, 0.996957, 0, -0.288562, -5.26975)
+mesh = SubResource("PlaneMesh_om1uv")
+surface_material_override/0 = SubResource("StandardMaterial3D_jgoib")
+
+[node name="trigger" type="MeshInstance3D" parent="gun body"]
+transform = Transform3D(0.075457, 0, 0, 0, 0.621454, 0.0528154, 0, -0.47829, 0.0686244, 0, -0.41733, -5.62374)
+mesh = SubResource("BoxMesh_wusn8")
+surface_material_override/0 = SubResource("StandardMaterial3D_u320h")
+
+[node name="pump" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8941)
+stream = ExtResource("6_litxa")
+volume_db = -11.789
+unit_size = 35.24
+pitch_scale = 1.51
+max_distance = 4096.0
+
+[node name="fire" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+stream = ExtResource("7_3tmlm")
+volume_db = -5.053
+unit_size = 50.58
+pitch_scale = 1.3

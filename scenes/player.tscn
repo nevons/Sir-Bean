@@ -1,9 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://ch6kboam07rix"]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2j46m"]
-[ext_resource type="PackedScene" uid="uid://cjolynplp8st7" path="res://scenes/scorpion.tscn" id="2_0gktl"]
+[ext_resource type="PackedScene" path="res://scenes/scorpion.tscn" id="2_0gktl"]
 [ext_resource type="PackedScene" uid="uid://cktd2qllwmhga" path="res://scenes/pistol.tscn" id="2_7vga5"]
-[ext_resource type="PackedScene" uid="uid://bwhgm86ofsqkb" path="res://scenes/weapons/shotgun.tscn" id="4_hwcwn"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/hr_weapons/shotgun.tscn" id="4_hwcwn"]
 [ext_resource type="AudioStream" uid="uid://ca02oghx6yh8q" path="res://sounds/pistol_cock.mp3" id="6_7s2io"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogkpx"]

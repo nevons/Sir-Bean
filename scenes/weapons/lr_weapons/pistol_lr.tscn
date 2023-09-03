@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7hqmio8x4ce6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udra4"]
+albedo_color = Color(0.176471, 0.176471, 0.176471, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5yb3c"]
+size = Vector3(0.07, 0.07, 0.07)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6ys8"]
+albedo_color = Color(0.290196, 0.290196, 0.290196, 1)
+metallic = 0.69
+metallic_specular = 0.73
+roughness = 0.25
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ksuh7"]
+material = SubResource("StandardMaterial3D_m6ys8")
+top_radius = 0.3
+bottom_radius = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1g4a"]
+albedo_color = Color(0.282353, 0.282353, 0.282353, 1)
+albedo_texture_force_srgb = true
+metallic = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2yn2i"]
+
+[node name="pistol_lr" type="RigidBody3D"]
+
+[node name="gun" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.2, 0, -5.07036e-07, 0, 0.2, 0, 5.07036e-07, 0, -0.2, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_udra4")
+size = Vector3(5, 1, 1)
+
+[node name="ramparts" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(-1, 0, 3.33851e-07, 0, 2.66022, 0, -1.50996e-07, 0, -2.211, 2.10201, 0.553066, 0.0175919)
+mesh = SubResource("BoxMesh_5yb3c")
+skeleton = NodePath("../..")
+
+[node name="ramparts2" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(-1, 0, 3.33851e-07, 0, 2.66022, 0, -1.50996e-07, 0, -2.211, -1.76302, 0.553066, 0.306482)
+mesh = SubResource("BoxMesh_5yb3c")
+skeleton = NodePath("../..")
+
+[node name="ramparts3" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(-1, 0, 3.33851e-07, 0, 2.66022, 0, -1.50996e-07, 0, -2.211, -1.76302, 0.553066, -0.281028)
+mesh = SubResource("BoxMesh_5yb3c")
+skeleton = NodePath("../..")
+
+[node name="barrel" type="MeshInstance3D" parent="gun"]
+transform = Transform3D(4.37114e-08, 1, 1.94707e-07, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1.94707e-07, -1, 1.68288, 0, 3.27668e-07)
+mesh = SubResource("CylinderMesh_ksuh7")
+skeleton = NodePath("../..")
+
+[node name="handle" type="CSGBox3D" parent="gun"]
+transform = Transform3D(1.398, -2.84217e-14, 0, 2.84217e-14, 1.62469, 0, -7.10543e-15, -8.47033e-22, 1, -2.13714, -1.24059, 2.84217e-14)
+material_override = SubResource("StandardMaterial3D_x1g4a")
+size = Vector3(0.5, 1, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.6351e-08, -0.503624, 0, 0.374067, -2.20141e-08, 0, 0, 0, 0.357932, 0.0227097, -8.18968e-05, 0)
+shape = SubResource("CapsuleShape3D_2yn2i")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.374067, 1.57972e-08, 0, -3.27019e-08, -0.180699, 0, 0, 0, 0.357932, 0.39228, -0.218319, 0)
+shape = SubResource("CapsuleShape3D_2yn2i")

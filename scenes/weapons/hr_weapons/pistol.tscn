@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://n1okpyp373di"]
+[gd_scene load_steps=15 format=3]
 
-[ext_resource type="Script" path="res://scripts/pistol.gd" id="1_2snx5"]
-[ext_resource type="AudioStream" uid="uid://dea1tkeuidr8b" path="res://sounds/gunshot.wav" id="1_rlwdl"]
+[ext_resource type="AudioStream" uid="uid://dea1tkeuidr8b" path="res://sounds/pistol_shot.wav" id="1_rlwdl"]
 [ext_resource type="AudioStream" uid="uid://1xqtvyghyqk1" path="res://sounds/pistol_reload.wav" id="2_hrqv1"]
+
+[sub_resource type="GDScript" id="GDScript_aa4vq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4i56u"]
 albedo_color = Color(0.290196, 0.290196, 0.290196, 1)
@@ -22,14 +23,14 @@ metallic_specular = 1.0
 [sub_resource type="BoxMesh" id="BoxMesh_5dmnl"]
 size = Vector3(0.07, 0.07, 0.07)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6ys8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_od0us"]
 albedo_color = Color(0.290196, 0.290196, 0.290196, 1)
 metallic = 0.69
 metallic_specular = 0.73
 roughness = 0.25
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_f86yl"]
-material = SubResource("StandardMaterial3D_m6ys8")
+material = SubResource("StandardMaterial3D_od0us")
 top_radius = 0.3
 bottom_radius = 0.3
 
@@ -213,7 +214,7 @@ _data = {
 
 [node name="pistol" type="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-script = ExtResource("1_2snx5")
+script = SubResource("GDScript_aa4vq")
 
 [node name="Mag" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.05191, -1.68643, 1.33403e-07)

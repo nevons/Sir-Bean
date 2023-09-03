@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bwhgm86ofsqkb"]
+[gd_scene load_steps=45 format=3]
 
 [ext_resource type="Texture2D" uid="uid://bth36fadtob45" path="res://textures/barrel texture.jpeg" id="1_7ci8h"]
 [ext_resource type="Script" path="res://scripts/shotgun.gd" id="1_v14n2"]
@@ -10,21 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://gmh4p5txgaud" path="res://textures/stock guard.jpg" id="7_fgg6h"]
 [ext_resource type="AudioStream" uid="uid://ccy4t6vtj5eu0" path="res://sounds/pumping shotgun.mp3" id="8_s4lm5"]
 [ext_resource type="AudioStream" uid="uid://bggbtxjemqq2e" path="res://sounds/shotgun fire.mp3" id="9_rkdhk"]
-[ext_resource type="PackedScene" uid="uid://evfj5c1alakr" path="res://scenes/weapons/shotgun_shell.tscn" id="11_8c83g"]
+[ext_resource type="PackedScene" uid="uid://evfj5c1alakr" path="res://scenes/weapons/models_weapons/shotgun_shell.tscn" id="11_8c83g"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_as2dv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yxa0"]
 albedo_color = Color(0.301961, 0.301961, 0.301961, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vr80j"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ln06q"]
 albedo_texture = ExtResource("1_7ci8h")
 metallic = 1.0
 metallic_specular = 1.0
 uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_n105m"]
-material = SubResource("StandardMaterial3D_vr80j")
+material = SubResource("StandardMaterial3D_ln06q")
 top_radius = 0.3
 bottom_radius = 0.3
 height = 5.0
@@ -45,14 +45,14 @@ top_radius = 0.35
 bottom_radius = 0.35
 height = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8ajh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdijc"]
 albedo_texture = ExtResource("2_d6stf")
 roughness = 0.71
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_6vtiq"]
-material = SubResource("StandardMaterial3D_x8ajh")
+material = SubResource("StandardMaterial3D_wdijc")
 top_radius = 0.4
 bottom_radius = 0.4
 height = 0.2
@@ -60,11 +60,11 @@ height = 0.2
 [sub_resource type="BoxMesh" id="BoxMesh_xwexe"]
 material = ExtResource("4_ob777")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbsf8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18pli"]
 albedo_texture = ExtResource("5_p4nxj")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kyj8k"]
-material = SubResource("StandardMaterial3D_mbsf8")
+material = SubResource("StandardMaterial3D_18pli")
 
 [sub_resource type="TubeTrailMesh" id="TubeTrailMesh_f8u2w"]
 radius = 0.4
@@ -118,13 +118,13 @@ metallic = 1.0
 metallic_specular = 1.0
 roughness = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hxfr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ycjb"]
 albedo_color = Color(0.4, 0.4, 0.4, 1)
 metallic = 0.55
 metallic_texture_channel = 2
 
 [sub_resource type="PrismMesh" id="PrismMesh_m8jyt"]
-material = SubResource("StandardMaterial3D_6hxfr")
+material = SubResource("StandardMaterial3D_1ycjb")
 
 [sub_resource type="Animation" id="Animation_356ta"]
 length = 0.001

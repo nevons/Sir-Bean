@@ -1,13 +1,15 @@
-[gd_scene load_steps=38 format=3 uid="uid://bs1apxkyn04g3"]
+[gd_scene load_steps=40 format=3 uid="uid://bs1apxkyn04g3"]
 
-[ext_resource type="PackedScene" uid="uid://ch6kboam07rix" path="res://scenes/player.tscn" id="1_yshll"]
 [ext_resource type="PackedScene" uid="uid://cjff8ao1dms5x" path="res://scenes/ptzac_cube.tscn" id="2_3v5ou"]
+[ext_resource type="PackedScene" uid="uid://c7hqmio8x4ce6" path="res://scenes/weapons/lr_weapons/pistol_lr.tscn" id="2_cs5ke"]
+[ext_resource type="PackedScene" uid="uid://cqb7gaj0vny42" path="res://scenes/weapons/lr_weapons/jack_off_shotgun_lr.tscn" id="2_jnelj"]
 [ext_resource type="Texture2D" uid="uid://512uyiyi4see" path="res://textures/memes/ricardo milos.jpeg" id="3_bma5v"]
 [ext_resource type="Texture2D" uid="uid://bm0fpcv80c81d" path="res://textures/memes/saulgoodman.jpeg" id="4_h28cj"]
 [ext_resource type="Texture2D" uid="uid://b8lr7pamt57gr" path="res://textures/memes/jesus.jpg" id="5_h6p08"]
 [ext_resource type="Texture2D" uid="uid://b8n32v7rs6b8a" path="res://textures/memes/osama.jpg" id="6_47sjv"]
 [ext_resource type="Texture2D" uid="uid://dvpv0j343e67y" path="res://textures/memes/lordandsaviour ryan gosling.jpg" id="7_dxw02"]
 [ext_resource type="Texture2D" uid="uid://bmk550oq6fvjy" path="res://textures/memes/heisenberg and jesse.jpg" id="8_0segx"]
+[ext_resource type="PackedScene" uid="uid://dv51tplyoivdk" path="res://scenes/stripped_back_player.tscn" id="8_byqht"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0gdhd"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -118,7 +120,14 @@ uv1_triplanar = true
 
 [node name="Node3D" type="Node3D"]
 
-[node name="player" parent="." instance=ExtResource("1_yshll")]
+[node name="stripped back player" parent="." instance=ExtResource("8_byqht")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+
+[node name="pistol_lr" parent="." instance=ExtResource("2_cs5ke")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13, 4, 11)
+
+[node name="jo_shotgun_lr" parent="." instance=ExtResource("2_jnelj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 9)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eyxrr")
@@ -130,19 +139,19 @@ shadow_enabled = true
 [node name="ptzac_cube" parent="." instance=ExtResource("2_3v5ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588756, -4.52115)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
+[node name="ricardo" type="RigidBody3D" parent="."]
 transform = Transform3D(0.600769, 0.56331, -0.567237, -0.659102, 0.750565, 0.0473048, 0.452395, 0.345448, 0.822195, 10.4958, 128.538, 1.36834)
 gravity_scale = 0.0
 angular_velocity = Vector3(0, 0.349066, 0)
 constant_torque = Vector3(0, 0.1, 0)
 
-[node name="RICARDO" type="MeshInstance3D" parent="RigidBody3D"]
+[node name="RICARDO" type="MeshInstance3D" parent="ricardo"]
 transform = Transform3D(1, 1.49012e-08, 2.98023e-08, 4.47035e-08, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_x54yg")
 mesh = SubResource("BoxMesh_63gj5")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ricardo"]
 transform = Transform3D(4.22306, 4.76837e-07, -5.96046e-07, 2.38419e-07, 4.86706, 5.96046e-07, -5.96046e-07, -1.19209e-07, -4.83638, 0, 0, 0)
 
 [node name="slope1" type="MeshInstance3D" parent="."]

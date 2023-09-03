@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ky426qhco4dl"
+path="res://.godot/imported/scorpion_gun.obj-5df6c6140e79c4b23b2b9217783c5434.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scorpion_gun.obj-5df6c6140e79c4b23b2b9217783c5434.mesh"]
+
+source_file="res://scenes/weapons/models_weapons/scorpion_gun.obj"
+dest_files=["res://.godot/imported/scorpion_gun.obj-5df6c6140e79c4b23b2b9217783c5434.mesh", "res://.godot/imported/scorpion_gun.obj-5df6c6140e79c4b23b2b9217783c5434.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
