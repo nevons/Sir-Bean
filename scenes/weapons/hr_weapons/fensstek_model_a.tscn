@@ -1,0 +1,230 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk3pdim86vey2"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_nqil5"]
+radius = 0.1
+radial_steps = 11
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3wifq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p7xee"]
+
+[node name="FENSSTEK model A" type="Node3D"]
+
+[node name="STOCK" type="Node3D" parent="."]
+transform = Transform3D(0.550407, 0, 0, 0, 1, 0, 0, 0, 6.30914, 0, 0, 0)
+
+[node name="stock1" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(1, 0, 0, 0, -1.67562e-07, -1.03084, 0, 0.607589, -7.1419e-09, -0.281711, 0.38053, -0.708381)
+mesh = SubResource("TubeTrailMesh_nqil5")
+skeleton = NodePath("../..")
+
+[node name="stock2" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(1, 0, 0, 0, -1.67562e-07, -1.03084, 0, 0.607589, -7.1419e-09, 0.332453, 0.38053, -0.708381)
+mesh = SubResource("TubeTrailMesh_nqil5")
+skeleton = NodePath("../..")
+
+[node name="stock3" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(1, 0, 0, 0, 0.810295, -3.55271e-15, 0, 0, 0.163388, -0.281711, 0.0807261, -1.01116)
+mesh = SubResource("TubeTrailMesh_nqil5")
+skeleton = NodePath("../..")
+
+[node name="stock4" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(1, 0, 0, 0, 0.810295, -3.55271e-15, 0, 0, 0.163388, 0.345166, 0.0807261, -1.01116)
+mesh = SubResource("TubeTrailMesh_nqil5")
+skeleton = NodePath("../..")
+
+[node name="stock5" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(1, 0, 0, 0, 0.768773, -1.00989, 0, 0.595245, 0.032767, 0.332453, -0.00620511, -0.726436)
+mesh = SubResource("TubeTrailMesh_nqil5")
+skeleton = NodePath("../..")
+
+[node name="stock6" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(1, 0, 0, 0, 0.768773, -1.00989, 0, 0.595245, 0.032767, -0.260655, -0.00620511, -0.726436)
+mesh = SubResource("TubeTrailMesh_nqil5")
+skeleton = NodePath("../..")
+
+[node name="stock7" type="MeshInstance3D" parent="STOCK"]
+transform = Transform3D(-7.94164e-09, 0.298584, 0, -0.1, -7.18364e-09, 0, 0, 0, 0.0188615, 0.0500983, 0.409588, -0.561019)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../..")
+
+[node name="STOCK ZIGZAG" type="Node3D" parent="STOCK/stock7"]
+
+[node name="stock8" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, 0, 0, -2.10049)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock9" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.49755)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock10" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.86887)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock11" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, 0, 0, -5.47181)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock12" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.0746)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock13" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, 0, 0, -8.67754)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock14" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.3396)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock15" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, 0, 0, -11.9425)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock16" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.5208)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock17" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, 0, 0, -15.1237)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock18" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.7658)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock19" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, 0, 0, -18.3688)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock20" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0351357, -0.0306513, -23.3884)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock21" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(1, 4.21927e-10, -4.91114e-10, 1.56223e-10, 0.994126, 0.00683656, 4.55681e-08, -1.71323, 0.994126, -0.0351357, -0.0306513, -21.9914)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock22" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 2.68772, 1.49012e-08, -2.33015)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock23" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 3.03335, 4.47035e-08, -3.69669)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock24" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 3.8674, 2.98023e-08, -6.99435)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock25" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 3.52177, 0, -5.62782)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock26" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 4.66047, 8.9407e-08, -10.13)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock27" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 4.31485, 2.98023e-08, -8.76351)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock28" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 5.46821, 8.9407e-08, -13.3237)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock29" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 5.12259, 1.04308e-07, -11.9571)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock30" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 6.25522, 8.9407e-08, -16.4354)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock31" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 5.9096, 1.19209e-07, -15.0688)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock32" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 7.05803, 1.49012e-07, -19.6095)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock33" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 6.71241, 1.49012e-07, -18.243)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock34" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, -5.81132e-10, -0.207895, -5.81126e-10, 1, -5.52952e-09, 0.207895, 5.52953e-09, 0.978152, 7.91987, -0.0306512, -23.1591)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock35" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978152, 0.356172, -0.206674, -3.92195e-10, 0.994126, 0.00683656, 0.207895, -1.6758, 0.972407, 7.57425, -0.0306511, -21.7926)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock36" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(0.978151, -5.81132e-10, -0.207895, -5.81128e-10, 1, -5.52952e-09, 0.207895, 5.52952e-09, 0.978151, 1.92392, -0.0306513, 0.606201)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock37" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(-4.37113e-08, -2.65977e-08, -1, -2.65977e-08, 1, -2.65977e-08, 0.999999, 2.65977e-08, -4.37113e-08, 0.0277672, 0, -23.7364)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock38" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(-4.37113e-08, -2.65977e-08, -1, -2.65977e-08, 1, -2.65977e-08, 0.999999, 2.65977e-08, -4.37113e-08, 4.03963, 7.45058e-08, -23.7364)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock39" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(-8.92795e-08, 1.71323, -0.994125, -2.64415e-08, 0.994126, 0.00683653, 0.999998, 1.01751e-07, -4.37639e-08, 2.37713, 2.98023e-08, -23.7364)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock40" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(-4.37113e-08, -2.65977e-08, -1, -2.65977e-08, 1, -2.65977e-08, 0.999998, 2.65977e-08, -4.37113e-08, 8.06736, 1.78814e-07, -23.7364)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock41" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(-8.92795e-08, 1.71323, -0.994125, -2.64415e-08, 0.994126, 0.00683653, 0.999998, 1.01751e-07, -4.37639e-08, 6.40486, 1.3411e-07, -23.7364)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="stock42" type="MeshInstance3D" parent="STOCK/stock7/STOCK ZIGZAG"]
+transform = Transform3D(-4.37113e-08, -2.65977e-08, -1, -2.65977e-08, 1, -2.65977e-08, 0.999998, 2.65977e-08, -4.37113e-08, 4.0555, 1.04308e-07, -23.7364)
+mesh = SubResource("CylinderMesh_3wifq")
+skeleton = NodePath("../../../..")
+
+[node name="chamber" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.550407, 0, 0, 0, 1, 0, 0, 0, 6.30914, 0, 0, 0)
+mesh = SubResource("BoxMesh_p7xee")

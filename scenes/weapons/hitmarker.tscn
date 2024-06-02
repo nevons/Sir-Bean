@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" uid="uid://6uf24ns1dvub" path="res://textures/hitmarker.jpg" id="1_7xiji"]
+[ext_resource type="Script" path="res://scripts/hitmarker.gd" id="2_xqcke"]
+[ext_resource type="AudioStream" uid="uid://dw8pg5r8s3you" path="res://sounds/hitmarker_audio.mp3" id="3_70h7r"]
+
+[node name="hitmarker" type="Sprite3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transparency = 1.0
+modulate = Color(100, 1, 1, 0.27)
+texture = ExtResource("1_7xiji")
+script = ExtResource("2_xqcke")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="hit" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_70h7r")
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

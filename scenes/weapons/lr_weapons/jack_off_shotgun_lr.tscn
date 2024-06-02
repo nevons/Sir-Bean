@@ -1,7 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://cqb7gaj0vny42"]
+[gd_scene load_steps=28 format=3 uid="uid://7nvqw6mbc3b5"]
 
 [ext_resource type="Texture2D" uid="uid://bth36fadtob45" path="res://textures/barrel texture.jpeg" id="1_6v3ac"]
-[ext_resource type="Script" path="res://scripts/weapon_pickup.gd" id="1_y1tys"]
+[ext_resource type="Script" path="res://scripts/interactable/weapon_pickup.gd" id="1_7paer"]
 [ext_resource type="Texture2D" uid="uid://cosbou1kvr6us" path="res://textures/shotgun barrel texture.jpeg" id="2_b1ast"]
 [ext_resource type="Texture2D" uid="uid://cj5rn5jjwboyc" path="res://textures/shotgun grip.jpg" id="3_4ugvq"]
 [ext_resource type="Texture2D" uid="uid://dfe1c22ichqr8" path="res://textures/black screen.JPG" id="4_eygfq"]
@@ -100,7 +100,7 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 collision_layer = 4
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_kwdye")
-script = ExtResource("1_y1tys")
+script = ExtResource("1_7paer")
 
 [node name="gun body" type="Node3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

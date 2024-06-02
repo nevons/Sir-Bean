@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://df5m8xhdswqk7"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://scripts/shotgun_pellet.gd" id="1_aordr"]
+[ext_resource type="Script" path="res://scripts/projectiles/shotgun_pellet.gd" id="1_aordr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bulgu"]
 albedo_color = Color(1, 1, 0, 1)

@@ -1,14 +1,14 @@
-[gd_scene load_steps=32 format=3 uid="uid://dv51tplyoivdk"]
+[gd_scene load_steps=32 format=3 uid="uid://otuwseky4txd"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_3rkvb"]
-[ext_resource type="Script" path="res://scripts/HUD.gd" id="2_o1cjb"]
+[ext_resource type="Script" path="res://scripts/interactable/HUD.gd" id="2_oikti"]
 [ext_resource type="PackedScene" uid="uid://qkbnfydjquwj" path="res://scenes/weapons/hr_weapons/jack_off_shotgun.tscn" id="2_prx1i"]
-[ext_resource type="Script" path="res://scripts/weapon_manager.gd" id="2_wl5sl"]
 [ext_resource type="AudioStream" uid="uid://bgoqu6sovoh0i" path="res://sounds/turtle-mating.mp3" id="3_2voxi"]
 [ext_resource type="Texture2D" uid="uid://e2gwjb203wom" path="res://textures/crosshair014.png" id="3_8pnyw"]
-[ext_resource type="Resource" uid="uid://cgud574myfgbt" path="res://resources/jos.tres" id="3_rmopk"]
+[ext_resource type="Resource" path="res://resources/jos.tres" id="3_rmopk"]
 [ext_resource type="PackedScene" uid="uid://evfj5c1alakr" path="res://scenes/weapons/models_weapons/shotgun_shell.tscn" id="3_tejes"]
-[ext_resource type="Resource" uid="uid://d3f30qrw5xk2b" path="res://resources/pistol.tres" id="4_6t13g"]
+[ext_resource type="Script" path="res://scripts/interactable/weapon_manager.gd" id="4_2iwc8"]
+[ext_resource type="Resource" path="res://resources/pistol.tres" id="4_6t13g"]
 [ext_resource type="PackedScene" path="res://scenes/weapons/hr_weapons/pistol.tscn" id="4_442vh"]
 [ext_resource type="AudioStream" uid="uid://b62v81m8wwdwd" path="res://sounds/gun-click.wav" id="4_l6edu"]
 [ext_resource type="AudioStream" uid="uid://1xqtvyghyqk1" path="res://sounds/pistol_reload.wav" id="5_xtpt3"]
@@ -788,7 +788,7 @@ wall_min_slide_angle = 0.785398
 script = ExtResource("1_3rkvb")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody3D"]
-script = ExtResource("2_o1cjb")
+script = ExtResource("2_oikti")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CharacterBody3D/CanvasLayer"]
 offset_right = 40.0
@@ -854,8 +854,8 @@ cull_mask = 1048573
 
 [node name="weapons-manager" type="Node3D" parent="CharacterBody3D/Head/Camera3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.173e-08, -1.55718, 0.134175)
-script = ExtResource("2_wl5sl")
-_weapon_resources = Array[Resource("res://scripts/weapon_resource.gd")]([ExtResource("4_6t13g"), ExtResource("3_rmopk")])
+script = ExtResource("4_2iwc8")
+_weapon_resources = Array[Resource("res://scripts/interactable/weapon_resource.gd")]([ExtResource("4_6t13g"), ExtResource("3_rmopk")])
 start_weapons = Array[String](["pistol", "jack_off_shotgun"])
 
 [node name="FPS_Rig" type="Node3D" parent="CharacterBody3D/Head/Camera3D/weapons-manager"]

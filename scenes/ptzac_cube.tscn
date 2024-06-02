@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjff8ao1dms5x"]
+[gd_scene load_steps=9 format=3 uid="uid://cjff8ao1dms5x"]
 
 [ext_resource type="Texture2D" uid="uid://d4nhn7rp1pouv" path="res://textures/memes/XEBwL-8yQiamJVLoUsxQXw-smiley face_image-3_1689842619.png" id="1_c8wo3"]
+[ext_resource type="Script" path="res://scripts/world_objects/ptzac_cube.gd" id="1_qqm0j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_syoc2"]
 friction = 0.75
@@ -23,13 +24,14 @@ uv1_scale = Vector3(8, 8, 8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_sdy1q"]
 
-[node name="ptzac_cube" type="RigidBody3D"]
+[node name="ptzac_cube" type="RigidBody3D" groups=["Target"]]
 collision_layer = 2
 collision_mask = 7
 mass = 0.37
 physics_material_override = SubResource("PhysicsMaterial_syoc2")
 can_sleep = false
 angular_velocity = Vector3(0, 1.74533, 0)
+script = ExtResource("1_qqm0j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_5ptsk")

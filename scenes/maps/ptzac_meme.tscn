@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cjff8ao1dms5x" path="res://scenes/ptzac_cube.tscn" id="2_3v5ou"]
 [ext_resource type="PackedScene" uid="uid://c7hqmio8x4ce6" path="res://scenes/weapons/lr_weapons/pistol_lr.tscn" id="2_cs5ke"]
-[ext_resource type="PackedScene" uid="uid://cqb7gaj0vny42" path="res://scenes/weapons/lr_weapons/jack_off_shotgun_lr.tscn" id="2_jnelj"]
+[ext_resource type="PackedScene" uid="uid://7nvqw6mbc3b5" path="res://scenes/weapons/lr_weapons/jack_off_shotgun_lr.tscn" id="2_jnelj"]
 [ext_resource type="Texture2D" uid="uid://512uyiyi4see" path="res://textures/memes/ricardo milos.jpeg" id="3_bma5v"]
 [ext_resource type="Texture2D" uid="uid://bm0fpcv80c81d" path="res://textures/memes/saulgoodman.jpeg" id="4_h28cj"]
 [ext_resource type="Texture2D" uid="uid://b8lr7pamt57gr" path="res://textures/memes/jesus.jpg" id="5_h6p08"]
 [ext_resource type="Texture2D" uid="uid://b8n32v7rs6b8a" path="res://textures/memes/osama.jpg" id="6_47sjv"]
 [ext_resource type="Texture2D" uid="uid://dvpv0j343e67y" path="res://textures/memes/lordandsaviour ryan gosling.jpg" id="7_dxw02"]
 [ext_resource type="Texture2D" uid="uid://bmk550oq6fvjy" path="res://textures/memes/heisenberg and jesse.jpg" id="8_0segx"]
-[ext_resource type="PackedScene" uid="uid://dv51tplyoivdk" path="res://scenes/stripped_back_player.tscn" id="8_byqht"]
+[ext_resource type="PackedScene" uid="uid://otuwseky4txd" path="res://scenes/stripped_back_player.tscn" id="8_byqht"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0gdhd"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

@@ -18,7 +18,11 @@ var weapon_list = {}
 
 @export var _weapon_resources : Array[weapon_resource]
 
+var hitmarker = preload("res://scenes/weapons/hitmarker.tscn")
+
 @export var start_weapons : Array[String]
+
+enum {NULL, HITSCAN, PROJECTILE}
 
 func _ready():
 	Initialize(start_weapons) #enter the state machine
@@ -82,6 +86,17 @@ func shoot():
 			anim_player.play(current_weapon.shoot_anim)
 			current_weapon.current_ammo -= 1
 			emit_signal("update_ammo", [current_weapon.current_ammo, current_weapon.reserve_ammo])
+			var camera_collision = get_camera_collision()
+			match current_weapon.Type:
+				NULL:
+					print("bro ain't chose 💀")
+					
+				HITSCAN:
+					hit_scan_collision(camera_collision)
+					
+				PROJECTILE:
+					pass
+	
 	else:
 		reload()
 	
@@ -101,3 +116,59 @@ func reload():
 		
 		else:
 			anim_player.play(current_weapon.ooa_anim)
+			
+
+func get_camera_collision()-> Vector3:
+	var camera = get_viewport().get_camera_3d()
+	var viewport = get_viewport().get_size()
+	
+	var ray_origin = camera.project_ray_origin(viewport/2)
+	var ray_end = ray_origin + camera.project_ray_normal(viewport/2) * current_weapon.weapon_range
+	
+	var new_intersection = PhysicsRayQueryParameters3D.create(ray_origin,ray_end)
+	var intersection = get_world_3d().direct_space_state.intersect_ray(new_intersection)
+	
+	if not intersection.is_empty():
+		var col_point = intersection.position
+		return col_point
+		
+	else:
+		return ray_end
+	
+
+
+func hit_scan_collision(collision_point):
+	var bullet_direction = collision_point - bullet_point.get_global_transform().origin.normalized()
+	var new_interection = PhysicsRayQueryParameters3D.create(bullet_point.get_global_transform().origin,collision_point+bullet_direction*2)
+	
+	var bullet_collision = get_world_3d().direct_space_state.intersect_ray(new_interection)
+	
+	if bullet_collision:
+		var hit_indicator = hitmarker.instantiate()
+		var world = get_tree().get_root()
+		world.add_child(hit_indicator)
+		hit_indicator.global_translate(bullet_collision.position)
+		
+		hit_scan_damage(bullet_collision.collider)
+
+
+
+func hit_scan_damage(collider):
+	if collider.is_in_group("Target") and collider.has_method("hit_successful"):
+		collider.hit_successful(current_weapon.weapon_damage)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
